@@ -1,0 +1,28 @@
+id: json_page 
+label: JSON Page Migration 
+Group: json_example 
+source: 
+  plugin: json_page 
+destination: 
+  plugin: entity:cities 
+  bundle: city 
+process: 
+  type: 
+    plugin: default_value 
+    default_value: city
+  field_id: _id
+  field_city: city
+  field_location:
+    plugin: explode
+    source: loc
+    delimiter: ,
+  field_pop: pop
+  field_state: state
+  created: date 
+  changed: date 
+  langcode: 
+    plugin: default_value 
+    default_value: en
+  uid: 
+    plugin: default_value 
+    default_value: 1
