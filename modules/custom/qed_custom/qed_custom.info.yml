@@ -1,0 +1,10 @@
+name: QED42 Migrate
+type: module
+description: Function to migrate content to drupal.
+core: 8.x
+package: Custom
+
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
+  - migrate_tools:migrate_tools
